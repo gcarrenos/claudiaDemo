@@ -6,265 +6,232 @@
     <meta name="description" content="">
     <meta name="author" content="Zeenko">
     <meta name="generator" content="GCS 0.84.0">
-    <title>Faber est suae quisque fortunae</title>
-
+    <title>wb-check</title>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/starter-template/">
-
     
-
     <!-- Bootstrap core CSS -->
-<!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
+    .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    }
+    @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+    }
+    }
     </style>
-
     
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
   </head>
   <body>
     
-<div class="col-lg-8 mx-auto p-3 py-md-5">
-  <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
-    <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg>
-      <span class="fs-4">Entity Form</span>
-    </a>
-  </header>
-
-  <main>
-
-    <!-- Button trigger modal -->
-    <div class="addEntityBtn d-none">
-      <button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#addEntity">
+    <div class="col-lg-12 mx-auto p-3 py-md-5">
+      <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+        <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="me-2" viewBox="0 0 118 94" role="img"><title>Bootstrap</title><path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z" fill="currentColor"></path></svg>
+        <span class="fs-4">Entity Form</span>
+      </a>
+    </header>
+    <main>
+      <!-- Button trigger modal -->
+      <div class="addEntityBtn d-none">
+        <button type="button" class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#addEntity">
         Add Entity
-      </button>
-    </div>
-    <div class="firstForm">
-    <h1>Please fill in as needed</h1>
-
-    <form class="baseEntity">
-      <div class="form-group row">
-        <label class="col-4 col-form-label" for="base_level_entity">Name of the company (Base level entity)</label> 
-        <div class="col-8">
-          <input id="base_level_entity" name="base_level_entity" type="text" value="Zeenko" class="form-control" aria-describedby="base_level_entityHelpBlock"> 
-          <span id="base_level_entityHelpBlock" class="form-text text-muted">You can use the real name or an alias.</span>
-        </div>
-      </div>
-      <div class="form-group row">
-        <label for="legal_form" class="col-4 col-form-label">Legal form</label> 
-        <div class="col-8">
-          <select id="legal_form" name="legal_form" class="custom-select">
-            <option value="byebye">Aktiengesellschaft (AG oder SE), börsennotiert an einem organisierten Markt</option>
-            <option value="byebye">Aktiengesellschaft (AG oder SE), nicht börsennotiert oder Börse kein organisierter Markt</option>
-            <option value="byebye">Anstalt öffentlichen Rechts</option>
-            <option value="">eingetragene oder europäische Genossenschaft (eG)</option>
-            <option value="">Partnerschaftsgesellschaft (z.B. PartG mbB)</option>
-            <option value="">Eingetragener Kaufmann (e.K.)</option>
-            <option value="">eingetragener Verein (e.V.)</option>
-            <option value="">rechtsfähiger wirtschaftlicher Verein (z.B. VVaG)</option>
-            <option value="">Einzelunternehmer</option>
-            <option value="">Gesellschaft bürgerlichen Rechts (z.B. Gesellschaften in Gründung.)</option>
-            <option value="">Gesellschaft mit beschränkter Haftung (GmbH)</option>
-            <option value="">GmbH & Co. KG</option>
-            <option value="">Kommanditgesellschaft (KG)</option>
-            <option value="">Kommanditgesellschaft auf Aktien (KGaA)</option>
-            <option value="">Körperschaft öffentlichen Rechts</option>
-            <option value="">Natürliche Person</option>
-            <option value="">Offene Handelsgesellschaft (OHG)</option>
-            <option value="">Erbengemeinschaft</option>
-            <option value="">Publikumsfonds (mit Sitz in der EU)</option>
-            <option value="">rechtsfähige Stiftung (nicht öffentlich-rechtlich)</option>
-            <option value="">rechtsfähige Stiftung (öffentlich-rechtlich)</option>
-            <option value="">nicht rechtsfähige Stiftung (nicht eigennützig für den Stifter)</option>
-            <option value="">nicht rechtsfähige Stiftung (eigennützig für den Stifter)</option>
-            <option value="">nicht rechtsfähiger Verein (nicht als e.V. eingetragen)</option>
-            <option value="">sonst. staatliche Institution</option>
-            <option value="">Spezialfonds (inländisch, nicht KG, AG oder GmbH&Co. KG, sondern rechtlich unselbständiges Sondervermögen)</option>
-            <option value="">Unternehmergesellschaft (haftungsbeschränkt); (UG)</option>
-            <option value="">WEG (Wohnungseigentumsgemeinschaft)</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group row">
-        <label class="col-4">3.Does a public company (organized market) or the public hand (federal, state, local) HOLD more than 50% of capital shares or voting rights and has control over the target company?</label> 
-        <div class="col-8">
-          <div class="custom-control custom-radio custom-control-inline">
-            <input name="q3" id="q3_0" type="radio" class="custom-control-input" value="yes" checked> 
-            <label for="q3_0" class="custom-control-label">yes</label>
-          </div>
-          <div class="custom-control custom-radio custom-control-inline">
-            <input name="q3" id="q3_1" type="radio" class="custom-control-input" value="no"> 
-            <label for="q3_1" class="custom-control-label">no</label>
-          </div>
-        </div>
-      </div>
-      <div class="form-group row">
-        <label class="col-4">4. IS THE REGISTERED office of the BASE  LEVEL  ENTITY ( company ) BASED in Germany  (?</label> 
-        <div class="col-8">
-          <div class="custom-control custom-radio custom-control-inline">
-            <input name="radio" id="radio_0" type="radio" class="custom-control-input" value="yes" checked> 
-            <label for="radio_0" class="custom-control-label">yes</label>
-          </div>
-          <div class="custom-control custom-radio custom-control-inline">
-            <input name="radio" id="radio_1" type="radio" class="custom-control-input" value="no"> 
-            <label for="radio_1" class="custom-control-label">no</label>
-          </div>
-        </div>
-      </div>
-      <div class="form-group row">
-        <label class="col-4">5. If one of the legal representatives (e.g.  Executive Board, Managing Director) directly  or indirectly involved in the  BASE LEVEL ENTITY(company)? (?)</label> 
-        <div class="col-8">
-          <div class="custom-control custom-radio custom-control-inline">
-            <input name="radio1" id="radio1_0" type="radio" class="custom-control-input" value="yes" checked> 
-            <label for="radio1_0" class="custom-control-label">yes</label>
-          </div>
-          <div class="custom-control custom-radio custom-control-inline">
-            <input name="radio1" id="radio1_1" type="radio" class="custom-control-input" value="no"> 
-            <label for="radio1_1" class="custom-control-label">no</label>
-          </div>
-        </div>
-      </div>
-      <div class="form-group row">
-        <label for="text" class="col-4 col-form-label">6. FILL IN THE FULL NAME</label> 
-        <div class="col-8">
-          <input id="fullName" name="fullName" type="text" class="form-control" value="Gustavo Carreno">
-        </div>
-      </div>
-      <div class="form-group row">
-        <label for="textarea" class="col-4 col-form-label">7. Name of the board of trustees / trustee  (Trustee, only if unincorporated  Foundation, endowment) (?)</label> 
-        <div class="col-8">
-          <textarea id="boardlist" name="boardlist" cols="40" rows="5" class="form-control"></textarea>
-        </div>
-      </div>
-      <div class="form-group row">
-        <label class="col-4">8. Are natural persons designated as beneficiaries?</label> 
-        <div class="col-8">
-          <div class="custom-control custom-radio custom-control-inline">
-            <input name="radio2" id="radio2_0" type="radio" class="custom-control-input" value="yes" checked> 
-            <label for="radio2_0" class="custom-control-label">yes</label>
-          </div>
-          <div class="custom-control custom-radio custom-control-inline">
-            <input name="radio2" id="radio2_1" type="radio" class="custom-control-input" value="no"> 
-            <label for="radio2_1" class="custom-control-label">no</label>
-          </div>
-        </div>
-      </div>
-      <div class="form-group row">
-        <label for="text1" class="col-4 col-form-label">9. Name of beneficiary</label> 
-        <div class="col-8">
-          <input id="beneficiary" name="beneficiary" type="text" class="form-control" value="Gustavo Carreno">
-        </div>
-      </div>
-      <div class="form-group row">
-        <label class="col-4">10. Are there other natural persons  THAT  exercise direct or indirect dominant  influence?</label> 
-        <div class="col-8">
-          <div class="custom-control custom-radio custom-control-inline">
-            <input name="radio3" id="radio3_0" type="radio" class="custom-control-input" value="yes" checked> 
-            <label for="radio3_0" class="custom-control-label">yes</label>
-          </div>
-          <div class="custom-control custom-radio custom-control-inline">
-            <input name="radio3" id="radio3_1" type="radio" class="custom-control-input" value="no"> 
-            <label for="radio3_1" class="custom-control-label">no</label>
-          </div>
-        </div>
-      </div>
-      <div class="form-group row">
-        <label for="text2" class="col-4 col-form-label">11. Names of other persons who EXERCISE directly controlling influence  (?)</label> 
-        <div class="col-8">
-          <input id="influened" name="influened" type="text" class="form-control" value="Vanessa">
-        </div>
-      </div> 
-      <div class="form-group row">
-        <div class="offset-4 col-8">
-          <button name="submit" type="submit" class="btn btn-primary">Submit</button>
-        </div>
-      </div>
-    </form>
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- No Need to Declare Modal -->
-<div class="modal fade" id="noDeclare" tabindex="-1" role="dialog" aria-labelledby="noDeclareLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="noDeclareLabel">No need</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-        to declare
+      <div class="firstForm">
+        <h1>Please fill in as needed</h1>
+        <form class="baseEntity">
+          <div class="form-group row">
+            <label class="col-4 col-form-label" for="base_level_entity">Name of the company (Base level entity)</label>
+            <div class="col-8">
+              <input id="base_level_entity" name="base_level_entity" type="text" value="Zeenko" class="form-control" aria-describedby="base_level_entityHelpBlock">
+              <span id="base_level_entityHelpBlock" class="form-text text-muted">You can use the real name or an alias.</span>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="legal_form" class="col-4 col-form-label">Legal form</label>
+            <div class="col-8">
+              <select id="legal_form" name="legal_form" class="custom-select">
+                <option value="byebye">Aktiengesellschaft (AG oder SE), börsennotiert an einem organisierten Markt</option>
+                <option value="byebye">Aktiengesellschaft (AG oder SE), nicht börsennotiert oder Börse kein organisierter Markt</option>
+                <option value="byebye">Anstalt öffentlichen Rechts</option>
+                <option value="">eingetragene oder europäische Genossenschaft (eG)</option>
+                <option value="">Partnerschaftsgesellschaft (z.B. PartG mbB)</option>
+                <option value="">Eingetragener Kaufmann (e.K.)</option>
+                <option value="">eingetragener Verein (e.V.)</option>
+                <option value="">rechtsfähiger wirtschaftlicher Verein (z.B. VVaG)</option>
+                <option value="">Einzelunternehmer</option>
+                <option value="">Gesellschaft bürgerlichen Rechts (z.B. Gesellschaften in Gründung.)</option>
+                <option value="">Gesellschaft mit beschränkter Haftung (GmbH)</option>
+                <option value="">GmbH & Co. KG</option>
+                <option value="">Kommanditgesellschaft (KG)</option>
+                <option value="">Kommanditgesellschaft auf Aktien (KGaA)</option>
+                <option value="">Körperschaft öffentlichen Rechts</option>
+                <option value="">Natürliche Person</option>
+                <option value="">Offene Handelsgesellschaft (OHG)</option>
+                <option value="">Erbengemeinschaft</option>
+                <option value="">Publikumsfonds (mit Sitz in der EU)</option>
+                <option value="">rechtsfähige Stiftung (nicht öffentlich-rechtlich)</option>
+                <option value="">rechtsfähige Stiftung (öffentlich-rechtlich)</option>
+                <option value="">nicht rechtsfähige Stiftung (nicht eigennützig für den Stifter)</option>
+                <option value="">nicht rechtsfähige Stiftung (eigennützig für den Stifter)</option>
+                <option value="">nicht rechtsfähiger Verein (nicht als e.V. eingetragen)</option>
+                <option value="">sonst. staatliche Institution</option>
+                <option value="">Spezialfonds (inländisch, nicht KG, AG oder GmbH&Co. KG, sondern rechtlich unselbständiges Sondervermögen)</option>
+                <option value="">Unternehmergesellschaft (haftungsbeschränkt); (UG)</option>
+                <option value="">WEG (Wohnungseigentumsgemeinschaft)</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-4">3.Does a public company (organized market) or the public hand (federal, state, local) HOLD more than 50% of capital shares or voting rights and has control over the target company?</label>
+            <div class="col-8">
+              <div class="custom-control custom-radio custom-control-inline">
+                <input name="q3" id="q3_0" type="radio" class="custom-control-input" value="yes" checked>
+                <label for="q3_0" class="custom-control-label">yes</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input name="q3" id="q3_1" type="radio" class="custom-control-input" value="no">
+                <label for="q3_1" class="custom-control-label">no</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-4">4. IS THE REGISTERED office of the BASE  LEVEL  ENTITY ( company ) BASED in Germany  (?</label>
+            <div class="col-8">
+              <div class="custom-control custom-radio custom-control-inline">
+                <input name="radio" id="radio_0" type="radio" class="custom-control-input" value="yes" checked>
+                <label for="radio_0" class="custom-control-label">yes</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input name="radio" id="radio_1" type="radio" class="custom-control-input" value="no">
+                <label for="radio_1" class="custom-control-label">no</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-4">5. If one of the legal representatives (e.g.  Executive Board, Managing Director) directly  or indirectly involved in the  BASE LEVEL ENTITY(company)? (?)</label>
+            <div class="col-8">
+              <div class="custom-control custom-radio custom-control-inline">
+                <input name="radio1" id="radio1_0" type="radio" class="custom-control-input" value="yes" checked>
+                <label for="radio1_0" class="custom-control-label">yes</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input name="radio1" id="radio1_1" type="radio" class="custom-control-input" value="no">
+                <label for="radio1_1" class="custom-control-label">no</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="text" class="col-4 col-form-label">6. FILL IN THE FULL NAME</label>
+            <div class="col-8">
+              <input id="fullName" name="fullName" type="text" class="form-control" value="Gustavo Carreno">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="textarea" class="col-4 col-form-label">7. Name of the board of trustees / trustee  (Trustee, only if unincorporated  Foundation, endowment) (?)</label>
+            <div class="col-8">
+              <textarea id="boardlist" name="boardlist" cols="40" rows="5" class="form-control"></textarea>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-4">8. Are natural persons designated as beneficiaries?</label>
+            <div class="col-8">
+              <div class="custom-control custom-radio custom-control-inline">
+                <input name="radio2" id="radio2_0" type="radio" class="custom-control-input" value="yes" checked>
+                <label for="radio2_0" class="custom-control-label">yes</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input name="radio2" id="radio2_1" type="radio" class="custom-control-input" value="no">
+                <label for="radio2_1" class="custom-control-label">no</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="text1" class="col-4 col-form-label">9. Name of beneficiary</label>
+            <div class="col-8">
+              <input id="beneficiary" name="beneficiary" type="text" class="form-control" value="Gustavo Carreno">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-4">10. Are there other natural persons  THAT  exercise direct or indirect dominant  influence?</label>
+            <div class="col-8">
+              <div class="custom-control custom-radio custom-control-inline">
+                <input name="radio3" id="radio3_0" type="radio" class="custom-control-input" value="yes" checked>
+                <label for="radio3_0" class="custom-control-label">yes</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input name="radio3" id="radio3_1" type="radio" class="custom-control-input" value="no">
+                <label for="radio3_1" class="custom-control-label">no</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="text2" class="col-4 col-form-label">11. Names of other persons who EXERCISE directly controlling influence  (?)</label>
+            <div class="col-8">
+              <input id="influened" name="influened" type="text" class="form-control" value="Vanessa">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="offset-4 col-8">
+              <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </form>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Enjoy!</button>
+      <!-- No Need to Declare Modal -->
+      <div class="modal fade" id="noDeclare" tabindex="-1" role="dialog" aria-labelledby="noDeclareLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="noDeclareLabel">No need</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              to declare
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Enjoy!</button>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-<!-- Add Entity Modal -->
-<div class="modal fade" id="addEntity" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addEntityLabel" aria-hidden="true">
-  <div class="modal-dialog  modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="addEntityLabel">Add new entity</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-
-
-
-          <form class="addEntityForm">
+      <!-- Add Entity Modal -->
+      <div class="modal fade" id="addEntity" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addEntityLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="addEntityLabel">Add new entity</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form class="addEntityForm">
                 <div class="form-group row">
-                  <label class="col-4 col-form-label" for="shareHolder">1. Name of the shareholder</label> 
+                  <label class="col-4 col-form-label" for="shareHolder">1. Name of the shareholder</label>
                   <div class="col-8">
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <div class="input-group-text"></div>
-                      </div> 
+                      </div>
                       <input id="shareHolder" name="shareHolder" type="text" aria-describedby="shareHolderHelpBlock" class="form-control" value="Los Lagartos LLC">
-                    </div> 
+                    </div>
                     <span id="shareHolderHelpBlock" class="form-text text-muted">You can use the real name or an alias.</span>
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="legal_form" class="col-4 col-form-label">2.Legal form</label> 
+                  <label for="legal_form" class="col-4 col-form-label">2.Legal form</label>
                   <div class="col-8">
                     <select id="legal_form" name="legal_form" class="custom-select">
                       <option value="rabbit">Aktiengesellschaft (AG oder SE), börsennotiert an einem organisierten Markt</option>
@@ -297,38 +264,41 @@
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="text3" class="col-4 col-form-label">3. At which company OR COMPANIES  does it HAS PARTICIPATION?</label> 
+                  <label for="parentEntity" class="col-4 col-form-label">3. At which company OR COMPANIES  does it HAS PARTICIPATION?</label>
                   <div class="col-8">
-                    <input id="text3" name="text3" type="text" class="form-control">
+                    <select id="parentEntity" name="parentEntity" class="custom-select">
+                      
+                    </select>
                   </div>
                 </div>
+                
                 <div class="form-group row">
-                  <label class="col-4">4. Does the participation exist as a general  partner and consists of some kind of  Right of representation for the KG?</label> 
+                  <label class="col-4">4. Does the participation exist as a general  partner and consists of some kind of  Right of representation for the KG?</label>
                   <div class="col-8">
                     <div class="custom-control custom-radio custom-control-inline">
-                      <input name="radio" id="radio_0" type="radio" class="custom-control-input" value="yes"> 
+                      <input name="radio" id="radio_0" type="radio" class="custom-control-input" value="yes">
                       <label for="radio_0" class="custom-control-label">yes</label>
                     </div>
                     <div class="custom-control custom-radio custom-control-inline">
-                      <input name="radio" id="radio_1" type="radio" class="custom-control-input" value="no" checked> 
+                      <input name="radio" id="radio_1" type="radio" class="custom-control-input" value="no" checked>
                       <label for="radio_1" class="custom-control-label">no</label>
                     </div>
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="capitalShare" class="col-4 col-form-label">5. CAPITAL SHARE PERCENTAGE</label> 
+                  <label for="capitalShare" class="col-4 col-form-label">5. CAPITAL SHARE PERCENTAGE</label>
                   <div class="col-8">
                     <input id="capitalShare" name="capitalShare" type="text" class="form-control" value="50">
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="text" class="col-4 col-form-label">6. held voting rights IN PERCENTAGE</label> 
+                  <label for="text" class="col-4 col-form-label">6. held voting rights IN PERCENTAGE</label>
                   <div class="col-8">
                     <input id="text" name="text" type="text" class="form-control">
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="select" class="col-4 col-form-label">7.Are there other TYPE OF control? Please select statements that apply controlling “name of legal entity” (“Mother”) via “name of entity of QUESTION 3  (“daughter”) describe. You can also choose none:</label> 
+                  <label for="select" class="col-4 col-form-label">7.Are there other TYPE OF control? Please select statements that apply controlling “name of legal entity” (“Mother”) via “name of entity of QUESTION 3  (“daughter”) describe. You can also choose none:</label>
                   <div class="col-8">
                     <select id="select" name="select" class="custom-select" multiple="multiple">
                       <option value="rabbit">There is the right of the mother, the majority of  Members of the finance and business policy  determining administrative, managerial or supervisory body of the subsidiary  order or withdraw</option>
@@ -342,165 +312,122 @@
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label class="col-4">8. Ist einer der gesetzlichen Vertreter (z.B. Vorstand, Geschäftsführer) direkt oder indirekt an der Zielgesellschaft beteiligt?</label> 
+                  <label class="col-4">8. Ist einer der gesetzlichen Vertreter (z.B. Vorstand, Geschäftsführer) direkt oder indirekt an der Zielgesellschaft beteiligt?</label>
                   <div class="col-8">
                     <div class="custom-control custom-radio custom-control-inline">
-                      <input name="radio1" id="radio1_0" type="radio" class="custom-control-input" value="yes"> 
+                      <input name="radio1" id="radio1_0" type="radio" class="custom-control-input" value="yes">
                       <label for="radio1_0" class="custom-control-label">yes</label>
                     </div>
                     <div class="custom-control custom-radio custom-control-inline">
-                      <input name="radio1" id="radio1_1" type="radio" class="custom-control-input" value="no"> 
+                      <input name="radio1" id="radio1_1" type="radio" class="custom-control-input" value="no">
                       <label for="radio1_1" class="custom-control-label">no</label>
                     </div>
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="fullName" class="col-4 col-form-label">9. FULL NAME</label> 
+                  <label for="fullName" class="col-4 col-form-label">9. FULL NAME</label>
                   <div class="col-8">
                     <input id="fullName" name="fullName" type="text" class="form-control" value="Vanessa Rojas">
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="boardlist" class="col-4 col-form-label">10.Name of the board of trustees / trustee</label> 
+                  <label for="boardlist" class="col-4 col-form-label">10.Name of the board of trustees / trustee</label>
                   <div class="col-8">
                     <textarea id="boardlist" name="boardlist" cols="40" rows="5" class="form-control">None</textarea>
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label class="col-4">11. Are natural persons determined as  beneficiaries?</label> 
+                  <label class="col-4">11. Are natural persons determined as  beneficiaries?</label>
                   <div class="col-8">
                     <div class="custom-control custom-radio custom-control-inline">
-                      <input name="radio2" id="radio2_0" type="radio" class="custom-control-input" value="yes"> 
+                      <input name="radio2" id="radio2_0" type="radio" class="custom-control-input" value="yes">
                       <label for="radio2_0" class="custom-control-label">yes</label>
                     </div>
                     <div class="custom-control custom-radio custom-control-inline">
-                      <input name="radio2" id="radio2_1" type="radio" class="custom-control-input" value="no"> 
+                      <input name="radio2" id="radio2_1" type="radio" class="custom-control-input" value="no">
                       <label for="radio2_1" class="custom-control-label">no</label>
                     </div>
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="beneficiary" class="col-4 col-form-label">12. Name of beneficiary</label> 
+                  <label for="beneficiary" class="col-4 col-form-label">12. Name of beneficiary</label>
                   <div class="col-8">
                     <input id="beneficiary" name="beneficiary" type="text" class="form-control" value="Marina Salazar">
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label class="col-4">13. Can be at least one natural person WITH controlling influence of at least 25% of wealth or the distribution of income take from the foundation?</label> 
+                  <label class="col-4">13. Can be at least one natural person WITH controlling influence of at least 25% of wealth or the distribution of income take from the foundation?</label>
                   <div class="col-8">
                     <div class="custom-control custom-radio custom-control-inline">
-                      <input name="radio3" id="radio3_0" type="radio" class="custom-control-input" value="yes"> 
+                      <input name="radio3" id="radio3_0" type="radio" class="custom-control-input" value="yes">
                       <label for="radio3_0" class="custom-control-label">yes</label>
                     </div>
                     <div class="custom-control custom-radio custom-control-inline">
-                      <input name="radio3" id="radio3_1" type="radio" class="custom-control-input" value="no"> 
+                      <input name="radio3" id="radio3_1" type="radio" class="custom-control-input" value="no">
                       <label for="radio3_1" class="custom-control-label">no</label>
                     </div>
                   </div>
                 </div>
                 <div class="form-group row">
-                  <label for="influenced" class="col-4 col-form-label">14. Names of other persons who - or immediately dominant  can exert influence</label> 
+                  <label for="influenced" class="col-4 col-form-label">14. Names of other persons who - or immediately dominant  can exert influence</label>
                   <div class="col-8">
                     <input id="influenced" name="influenced" type="text" class="form-control" value="Adolfo Salazar">
                   </div>
-                </div> 
+                </div>
               </form>
-               
-
-     
-
+              
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="addEntityBtn">Add</button>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" id="addEntityBtn">Add</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-
-  </main>
-
-
-
-
-
-
-
-
-
-  <div class="container">
-  <div class="row">
-
-
-  <div id="sample">
-  <div id="myDiagramDiv" style="background-color: rgb(52, 52, 60); border: 1px solid black; height: 570px; position: relative; -webkit-tap-highlight-color: rgba(255, 255, 255, 0); cursor: auto;"><canvas tabindex="0" width="1104" height="551" style="position: absolute; top: 0px; left: 0px; z-index: 2; user-select: none; touch-action: none; width: 1104px; height: 551px; cursor: auto;">This text is displayed if your browser does not support the Canvas HTML element.</canvas><div style="position: absolute; overflow: auto; width: 1104px; height: 568px; z-index: 1;"><div style="position: absolute; width: 1695.5px; height: 1px;"></div></div></div>
-
-  <p><button id="zoomToFit">Zoom to Fit</button> <button id="centerRoot">Center on root</button></p>
-
-    <div>
-      <div>
-        <button id="SaveButton" onclick="save()">Save</button>
-        <button onclick="load()">Load</button>
-        Diagram Model saved in JSON format:
+    </main>
+    <div class="container col-lg-12 mx-auto">
+      <div class="row">
+        <div class="col-sm-10">
+          <div id="sample">
+            <div id="myDiagramDiv" style="background-color: rgb(52, 52, 60); border: 1px solid black; height: 570px; position: relative; -webkit-tap-highlight-color: rgba(255, 255, 255, 0); cursor: auto;"><canvas tabindex="0" width="1104" height="551" style="position: absolute; top: 0px; left: 0px; z-index: 2; user-select: none; touch-action: none; width: 1104px; height: 551px; cursor: auto;">This text is displayed if your browser does not support the Canvas HTML element.</canvas><div style="position: absolute; overflow: auto; width: 1104px; height: 568px; z-index: 1;"><div style="position: absolute; width: 1695.5px; height: 1px;"></div></div></div>
+            <p><button id="zoomToFit">Zoom to Fit</button> <button id="centerRoot">Center on root</button></p>
+            <div>
+              <div>
+                <button id="SaveButton" onclick="save()">Save</button>
+                <button onclick="load()">Load</button>
+                Diagram Model saved in JSON format:
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="btns" style="background-color:rgba(0, 0, 0, .4); padding: 10px 20px;">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entity!</button>
+            <hr>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Stimmepool</button>
+            <hr>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">TEST</button>
+            <hr>
+            
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">SAVE</button>
+            <hr>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">PAY</button>
+            
+          </div>
+        </div>
       </div>
     </div>
+    <footer class="pt-5 my-5 text-muted border-top">
+      Created by the Z33N]/0 team &middot; &copy; 2022
+    </footer>
   </div>
-
-</div>
-</div>  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <footer class="pt-5 my-5 text-muted border-top">
-    Created by the Z33N]/0 team &middot; &copy; 2022
-  </footer>
-</div>
-
-
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-<script src="https://unpkg.com/gojs"></script>
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="js/chart.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
-
-      
-
-
-
-
-
-
-
-
-
-
-  </body>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/gojs"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/chart.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  
+</body>
 </html>

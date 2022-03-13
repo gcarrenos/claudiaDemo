@@ -13,10 +13,14 @@ $(document).on('submit', 'form.baseEntity', function(e) {
       fullName: $("#fullName", this).val(),
       boardList: $("#boardlist", this).val(),
       beneficiary: $("#beneficiary", this).val(),
-      influenced: $("#influened", this).val()
+      influenced: $("#influened", this).val(),
+      id: 1
    };
 
    console.log(baseEntity)
+
+   entitiesList.push(baseEntity);  
+
 
    chart = {
       "class": "go.TreeModel",
@@ -46,6 +50,12 @@ $(document).on('submit', 'form.baseEntity', function(e) {
       $("div.firstForm").fadeOut(500);
       $("div.addEntityBtn").removeClass('d-none').fadeIn(500);
 
+      // Add Base to Dropdown
+      $('#parentEntity').append($('<option>', {
+         value: baseEntity.id,
+         text: baseEntity.baseEntity
+     }));
+
    }
 });
 
@@ -72,7 +82,8 @@ $(document).on('submit', 'form.addEntityForm', function(e) {
       fullName: $("#fullName", this).val(),
       boardList: $("#boardlist", this).val(),
       beneficiary: $("#beneficiary", this).val(),
-      influenced: $("#influenced", this).val()
+      influenced: $("#influenced", this).val(),
+      id: entitiesList.length+1
    };
 
    console.log(tempEntity)
@@ -83,12 +94,20 @@ $(document).on('submit', 'form.addEntityForm', function(e) {
    localStorage.setItem('entitiesList', JSON.stringify(entitiesList));
  
 
+    // Add Base to Dropdown
+      $('#parentEntity').append($('<option>', {
+         value: tempEntity.id,
+         text: tempEntity.shareHolder
+   }));
+
+
+   //add to Chart
 
    chart.nodeDataArray.push({
-         "key": chart.nodeDataArray.slice(-1)[0].key+1,
-         "name": tempEntity.baseEntity,
+         "key": tempEntity.id,
+         "name": tempEntity.shareHolder,
          "CEO": tempEntity.fullName,
-         "parent":1
+         "parent":$("#parentEntity").val()
    })
 
 
